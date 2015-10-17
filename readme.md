@@ -1,3 +1,9 @@
+## CRUD (Create Read Update Delete) in a Laravel 5 App
+
+**CRUD (Create Read Update Delete) in a Laravel 5 App** is a tutorial application (in french [there](http://blog.erlem.fr/programmation/developpement-web/framework/33-laravel/193-laravel-5-construire-une-application-crud)).
+
+In this tutorial, we’re going to build and run a simple CRUD application from scratch using Laravel 5.
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
@@ -10,18 +16,42 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-## Official Documentation
+## Official Documentation Laval
 
 Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
-## Contributing
+## Tutorial
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+French tutorial [Laravel 5 - Construire une application CRUD](http://blog.erlem.fr/programmation/developpement-web/framework/33-laravel/193-laravel-5-construire-une-application-crud).
 
-## Security Vulnerabilities
+## Installation
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+- `git clone https://github.com/erlem/tasks-laravel5.git tasks`
+- `cd tasks`
+- `composer install`
+- `php artisan key:generate`
+- Create a database and inform .env
+- `php artisan migrate --seed` to create and populate tables
 
-### License
+## Include
+
+- [Bootstrap](http://getbootstrap.com/) for CSS and jQuery plugins
+
+
+## Features
+
+- Home page
+- Lists Tasks
+- Create tasks
+- Read tasks
+- Update tasks
+- Delete tasks
+
+## Packages included
+
+- illuminate/html
+- barryvdh/laravel-debugbar
+
+## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
