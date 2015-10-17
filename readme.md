@@ -30,7 +30,7 @@ French tutorial [Laravel 5 - Construire une application CRUD](http://blog.erlem.
 - `cd tasks`
 - `composer install`
 - `mv .env.example .env` rename .env.example
-- `php artisan key:generate` and inform .env (APP_KEY)
+- `php artisan key:generate`
 - Connect to a MySQL database `mysql -u root -p`
 - Create a MySQL database ``CREATE DATABASE `local.tasks`;``
 - Exit `exit;`
