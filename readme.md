@@ -29,8 +29,12 @@ French tutorial [Laravel 5 - Construire une application CRUD](http://blog.erlem.
 - `git clone https://github.com/erlem/tasks-laravel5.git tasks`
 - `cd tasks`
 - `composer install`
-- `php artisan key:generate`
-- Create a database and inform .env
+- `mv .env.example .env` rename .env.example
+- `php artisan key:generate` and inform .env (APP_KEY)
+- Connect to a MySQL database `mysql -u root -p`
+- Create a MySQL database ``CREATE DATABASE `local.tasks`;``
+- Exit `exit;`
+- Inform .env (DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD=root)
 - `php artisan migrate --seed` to create and populate tables
 
 ## Include
