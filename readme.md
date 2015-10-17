@@ -36,11 +36,11 @@ French tutorial [Laravel 5 - Construire une application CRUD](http://blog.erlem.
 - Exit `exit;`
 - Inform .env (DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD=root)
 - `php artisan migrate --seed` to create and populate tables
+- `chmod 777 -R storage/` change the folder permissions
 
 ## Include
 
 - [Bootstrap](http://getbootstrap.com/) for CSS and jQuery plugins
-
 
 ## Features
 
