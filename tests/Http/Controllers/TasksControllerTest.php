@@ -4,16 +4,16 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class ExampleTest extends TestCase
+class TasksControllerTest extends TestCase
 {
     /**
-     * A basic functional test example.
+     * Display a listing of the resource.
      *
      * @return void
      */
-    public function testBasicExample()
+    public function testIndex()
     {
-        $this->visit('/')
-             ->see('Laravel 5');
+        $response = $this->action('GET', 'TasksController@index');
+        $this->assertResponseOk();
     }
 }

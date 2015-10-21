@@ -22,4 +22,14 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
 
         return $app;
     }
+
+    public function testBasicExample()
+    {
+        $data = [15, 10, 5, 20];
+        $result = array_sum($data);
+        $this->assertEquals(50, $result);
+    }
+
+
+
 }
