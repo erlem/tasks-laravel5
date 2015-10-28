@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost/" />
+<title>Home</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Home</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/test/tasks/public/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Tasks</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>Welcome</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.lead</td>
+	<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate mauris non velit eleifend, ac congue odio feugiat. Duis vitae urna interdum, sodales magna quis, condimentum mauris. In id tortor erat. Proin libero dolor, interdum a auctor sed, auctor ut neque. Vivamus sed libero magna. Sed at purus lobortis, accumsan neque sed, facilisis nibh. Proin quis congue lectus, vel mollis lectus. In ligula risus, semper ut libero id, rutrum lobortis lorem. Aenean lacus elit, viverra nec lacinia ac, elementum vitae ex. Cras non ante sit amet libero pharetra tincidunt. Pellentesque massa purus, iaculis sed dictum et, rutrum nec quam.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=View Tasks</td>
+	<td>View Tasks</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Add New Task</td>
+	<td>Add New Task</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
