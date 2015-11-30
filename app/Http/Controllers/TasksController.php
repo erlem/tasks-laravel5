@@ -64,9 +64,16 @@ class TasksController extends Controller
      */
     public function show($id)
     {
-        $task = Task::findOrFail($id);
+        if(is_numeric($id)){
+            $task = Task::find($id);
+            if($task === null){
+                return redirect()->route('tasks.index');
+            }
 
-        return view('tasks.show', compact('task'));
+            return view('tasks.show', compact('task'));            
+        }
+        
+        return redirect()->route('tasks.index');
     }
 
     /**
@@ -76,10 +83,17 @@ class TasksController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        $task = Task::findOrFail($id);
+    {        
+        if(is_numeric($id)){
+            $task = Task::find($id);
+            if($task === null){
+                return redirect()->route('tasks.index');
+            }
+            
+            return view('tasks.edit', compact('task'));            
+        }
 
-        return view('tasks.edit', compact('task'));
+        return redirect()->route('tasks.index');
     }
 
     /**
