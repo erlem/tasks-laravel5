@@ -19,8 +19,6 @@ class TasksController extends Controller
      */
     public function index()
     {
-        $tasks = Task::latest('updated_at')->get();
-
         return view('tasks.index', compact('tasks'));
     }
 
@@ -64,8 +62,6 @@ class TasksController extends Controller
      */
     public function show($id)
     {
-        $task = Task::findOrFail($id);
-
         return view('tasks.show', compact('task'));
     }
 
@@ -77,8 +73,6 @@ class TasksController extends Controller
      */
     public function edit($id)
     {
-        $task = Task::findOrFail($id);
-
         return view('tasks.edit', compact('task'));
     }
 
