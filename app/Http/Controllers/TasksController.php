@@ -65,7 +65,7 @@ class TasksController extends Controller
      */
     public function show($id)
     {
-        $task = Task::findOrFail($id);
+        $data['tasks'] = Task::findOrFail($id);
 
         return view('tasks.show', $data);
     }
@@ -78,7 +78,7 @@ class TasksController extends Controller
     */
     public function edit($id)
     {
-        $task = Task::findOrFail($id);
+        $data['tasks'] = Task::findOrFail($id);
 
         return view('tasks.edit', $data);
     }
@@ -92,7 +92,7 @@ class TasksController extends Controller
     */
     public function update(Request $request, $id)
     {
-        $task = Task::findOrFail($id);
+        $data['tasks'] = Task::findOrFail($id);
 
         $this->validate($request, [
             'title' => 'required',
@@ -101,7 +101,7 @@ class TasksController extends Controller
 
         $input = $request->all();
 
-        $task->fill($input)->save();
+        $data['tasks']->fill($input)->save();
 
         Session::flash('flash_message', 'Task successfully modified!');
 
@@ -116,9 +116,9 @@ class TasksController extends Controller
    */
     public function destroy($id)
     {
-        $task = Task::findOrFail($id);
+        $data['tasks'] = Task::findOrFail($id);
 
-        $task->delete();
+        $data['tasks']->delete();
 
         Session::flash('flash_message', 'Task successfully deleted!');
 
