@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Redirect;
 
 class TasksController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *
@@ -19,9 +20,9 @@ class TasksController extends Controller
      */
     public function index()
     {
-        $tasks = Task::latest('updated_at')->get();
+        $data['tasks'] = Task::latest('updated_at')->get();
 
-        return view('tasks.index', compact('tasks'));
+        return view('tasks.index', $data);
     }
 
     /**
@@ -55,7 +56,7 @@ class TasksController extends Controller
 
         return redirect()->route('tasks.index');
     }
-
+ 
     /**
      * Display the specified resource.
      *
@@ -66,7 +67,7 @@ class TasksController extends Controller
     {
         $task = Task::findOrFail($id);
 
-        return view('tasks.show', compact('task'));
+        return view('tasks.show', $data);
     }
 
     /**
@@ -74,21 +75,21 @@ class TasksController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */
+    */
     public function edit($id)
     {
         $task = Task::findOrFail($id);
 
-        return view('tasks.edit', compact('task'));
+        return view('tasks.edit', $data);
     }
-
+ 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */
+    */
     public function update(Request $request, $id)
     {
         $task = Task::findOrFail($id);
@@ -106,13 +107,13 @@ class TasksController extends Controller
 
         return redirect()->route('tasks.index');
     }
-
+ 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */
+   */
     public function destroy($id)
     {
         $task = Task::findOrFail($id);
@@ -123,4 +124,5 @@ class TasksController extends Controller
 
         return redirect()->route('tasks.index');
     }
+    
 }
