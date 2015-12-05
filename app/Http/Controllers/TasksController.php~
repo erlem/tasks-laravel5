@@ -65,7 +65,7 @@ class TasksController extends Controller
     public function show($id)
     {
         $data['task'] = Task::findOrFail($id);
-        return view('tasks.show', $data);
+        //return view('tasks.show', $data);
     }
 
     /**
