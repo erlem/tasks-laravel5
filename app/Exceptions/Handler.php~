@@ -28,7 +28,11 @@ class Handler extends ExceptionHandler
      * @param  \Exception  $e
      * @return void
      */
-   
+    public function report(Exception $e)
+    {
+        return parent::report($e);
+    }
+
     /**
      * Render an exception into an HTTP response.
      *

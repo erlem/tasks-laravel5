@@ -1,6 +1,6 @@
 APP_ENV=local
 APP_DEBUG=true
-APP_KEY=SomeRandomString
+APP_KEY=8soZgGqZwUq8Lx7poLUMuDCBTXQ5i9ru
 
 DB_HOST=localhost
 DB_DATABASE=homestead
