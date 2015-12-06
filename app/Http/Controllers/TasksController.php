@@ -14,7 +14,7 @@ class TasksController extends Controller
 {
     
     /* Definition des constantes */
-    const ti = 'tasks.index';
+    $ti = 'tasks.index';
     
     
     /**
@@ -24,7 +24,7 @@ class TasksController extends Controller
      */
     public function index()
     {
-        return view(ti, compact('tasks'));
+        return view($ti, compact('tasks'));
     }
 
     /**
@@ -56,7 +56,7 @@ class TasksController extends Controller
 
         Session::flash('flash_message', 'Task successfully added!');
 
-        return redirect()->route(ti);
+        return redirect()->route($ti);
     }
 
     /**
@@ -103,7 +103,7 @@ class TasksController extends Controller
 
         Session::flash('flash_message', 'Task successfully modified!');
 
-        return redirect()->route(ti);
+        return redirect()->route($ti);
     }
 
     /**
@@ -120,6 +120,6 @@ class TasksController extends Controller
 
         Session::flash('flash_message', 'Task successfully deleted!');
 
-        return redirect()->route(ti);
+        return redirect()->route($ti);
     }
 }
