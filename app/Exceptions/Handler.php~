@@ -20,7 +20,7 @@ class Handler extends ExceptionHandler
         ModelNotFoundException::class,
     ];
 
-    /* Suppression de la methode report(), car re-écrire une méthode préente dans la super-classe (classe mère) sans différences est inutile : Resolve as fixed */
+    /* Suppression de la methode report, car re-écrire une méthode préente dans la super-classe (classe mère) sans différences est inutile : Resolve as fixed */
 
     /**
      * Render an exception into an HTTP response.
