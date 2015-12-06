@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\Redirect;
 
 class TasksController extends Controller
 {
+    
+    /* Definition des constantes */
+    const ti = 'tasks.index';
+    
+    
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +24,7 @@ class TasksController extends Controller
      */
     public function index()
     {
-        return view('tasks.index', compact('tasks'));
+        return view(ti, compact('tasks'));
     }
 
     /**
@@ -51,7 +56,7 @@ class TasksController extends Controller
 
         Session::flash('flash_message', 'Task successfully added!');
 
-        return redirect()->route('tasks.index');
+        return redirect()->route(ti);
     }
 
     /**
@@ -98,7 +103,7 @@ class TasksController extends Controller
 
         Session::flash('flash_message', 'Task successfully modified!');
 
-        return redirect()->route('tasks.index');
+        return redirect()->route(ti);
     }
 
     /**
@@ -115,6 +120,6 @@ class TasksController extends Controller
 
         Session::flash('flash_message', 'Task successfully deleted!');
 
-        return redirect()->route('tasks.index');
+        return redirect()->route(ti);
     }
 }
