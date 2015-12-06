@@ -54,7 +54,7 @@ class TasksControllerTest extends TestCase
 
     public function testDestroy()
     {
-	/* Sans avoir sélectionné une id précise*/
+	/* Sans avoir sélectionné ue id précise*/
         $this->visit('tasks')
 	     ->press('Delete this task?')
 	     ->seePageIs('tasks');

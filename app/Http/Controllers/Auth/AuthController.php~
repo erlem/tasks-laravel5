@@ -10,9 +10,6 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
-
-    /* Duplications de strings : email et password selon SonarQube: Resolve as false positive */
-    
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
